@@ -7,7 +7,7 @@ double f(double x){
 }
  
  
-double  solve(double x0,double x1){
+double  solve_secant(double x0,double x1){
      double x;
     
      int i=0;
@@ -18,7 +18,7 @@ double  solve(double x0,double x1){
             x1=x;
             i++;
      }
-     //printf("运算次数为 i=%d\n",i);
+     //printf("the number of operations: i=%d\n",i);
     
      return (x1);
 }
@@ -29,7 +29,7 @@ int main ()
      printf("please input m n: \n");
      scanf("%lf%lf",&m,&n);
     
-     result=solve(m,n);
+     result=solve_secant(m,n);
     
     printf("result=% 6.3f\n",result);
 }
